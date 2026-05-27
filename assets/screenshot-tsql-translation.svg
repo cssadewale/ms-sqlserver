@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" font-family="Segoe UI,sans-serif">
+<rect width="1200" height="700" fill="#1e1e1e"/>
+<!-- Title -->
+<rect x="0" y="0" width="1200" height="40" fill="#0078d4"/>
+<text x="20" y="26" fill="#fff" font-size="16" font-weight="700">🔄 T-SQL → SQLite Auto-Translation Engine</text>
+<text x="1180" y="26" fill="#fff" font-size="11" text-anchor="end">35+ Rules · No AI · Pure Deterministic</text>
+<!-- Section: How it works -->
+<text x="20" y="68" fill="#fff" font-size="13" font-weight="600">How it works:</text>
+<g font-size="11.5" fill="#ccc">
+<text x="20" y="88">1. You write authentic Microsoft T-SQL syntax in the editor</text>
+<text x="20" y="106">2. On execution, the translation engine applies matching rules to produce SQLite-compatible SQL</text>
+<text x="20" y="124">3. Messages tab shows which rules fired</text>
+<text x="20" y="142">4. Status bar badge lets you toggle: AUTO → STRICT → OFF</text>
+</g>
+<!-- Two columns: Input/Output examples -->
+<text x="20" y="176" fill="#fff" font-size="13" font-weight="600">Side-by-Side Examples</text>
+<!-- Header -->
+<rect x="20" y="186" width="570" height="22" fill="#2d2d30"/>
+<text x="30" y="200" fill="#fff" font-size="11" font-weight="600">✍ You Type (T-SQL)</text>
+<rect x="610" y="186" width="570" height="22" fill="#2d2d30"/>
+<text x="620" y="200" fill="#fff" font-size="11" font-weight="600">⚙ What Runs (SQLite)</text>
+<!-- Row 1: SELECT TOP -->
+<rect x="20" y="208" width="570" height="48" fill="#252526" stroke="#3f3f46"/>
+<text x="30" y="226" fill="#569cd6" font-size="11.5" font-family="JetBrains Mono,monospace" font-weight="600">SELECT TOP 10 first_name, salary</text>
+<text x="30" y="244" fill="#ccc" font-size="11.5" font-family="JetBrains Mono,monospace">FROM employees WHERE salary > 700000;</text>
+<rect x="610" y="208" width="570" height="48" fill="#252526" stroke="#3f3f46"/>
+<text x="620" y="226" fill="#569cd6" font-size="11.5" font-family="JetBrains Mono,monospace" font-weight="600">SELECT first_name, salary</text>
+<text x="620" y="244" fill="#ccc" font-size="11.5" font-family="JetBrains Mono,monospace">FROM employees WHERE salary > 700000 <tspan fill="#dcdcaa">LIMIT 10</tspan>;</text>
+<!-- Row 2: GETDATE -->
+<rect x="20" y="260" width="570" height="48" fill="#1e1e1e" stroke="#3f3f46"/>
+<text x="30" y="278" fill="#ccc" font-size="11.5" font-family="JetBrains Mono,monospace">SELECT name, <tspan fill="#dcdcaa">GETDATE()</tspan> AS today,</text>
+<text x="30" y="296" fill="#ccc" font-size="11.5" font-family="JetBrains Mono,monospace">  <tspan fill="#dcdcaa">DATEDIFF</tspan>(day, hire_date, <tspan fill="#dcdcaa">GETDATE()</tspan>) AS days</text>
+<rect x="610" y="260" width="570" height="48" fill="#1e1e1e" stroke="#3f3f46"/>
+<text x="620" y="278" fill="#ccc" font-size="11.5" font-family="JetBrains Mono,monospace">SELECT name, <tspan fill="#dcdcaa">datetime('now','localtime')</tspan> AS today,</text>
+<text x="620" y="296" fill="#ccc" font-size="11.5" font-family="JetBrains Mono,monospace">  CAST((julianday(...) - julianday(hire_date))*1 AS INT) AS days</text>
+<!-- Row 3: IIF -->
+<rect x="20" y="312" width="570" height="48" fill="#252526" stroke="#3f3f46"/>
+<text x="30" y="330" fill="#ccc" font-size="11.5" font-family="JetBrains Mono,monospace">SELECT first_name,</text>
+<text x="30" y="348" fill="#ccc" font-size="11.5" font-family="JetBrains Mono,monospace">  <tspan fill="#dcdcaa">IIF</tspan>(salary > 700000, 'High', 'Low') AS band</text>
+<rect x="610" y="312" width="570" height="48" fill="#252526" stroke="#3f3f46"/>
+<text x="620" y="330" fill="#ccc" font-size="11.5" font-family="JetBrains Mono,monospace">SELECT first_name,</text>
+<text x="620" y="348" fill="#ccc" font-size="11.5" font-family="JetBrains Mono,monospace">  (<tspan fill="#c586c0">CASE WHEN</tspan> salary > 700000 <tspan fill="#c586c0">THEN</tspan> 'High' <tspan fill="#c586c0">ELSE</tspan> 'Low' <tspan fill="#c586c0">END</tspan>) AS band</text>
+<!-- Row 4: ISNULL, LEN, CHARINDEX -->
+<rect x="20" y="364" width="570" height="48" fill="#1e1e1e" stroke="#3f3f46"/>
+<text x="30" y="382" fill="#ccc" font-size="11.5" font-family="JetBrains Mono,monospace">SELECT <tspan fill="#dcdcaa">ISNULL</tspan>(city,'N/A'), <tspan fill="#dcdcaa">LEN</tspan>(first_name),</text>
+<text x="30" y="400" fill="#ccc" font-size="11.5" font-family="JetBrains Mono,monospace">  <tspan fill="#dcdcaa">CHARINDEX</tspan>('@', email) FROM customers;</text>
+<rect x="610" y="364" width="570" height="48" fill="#1e1e1e" stroke="#3f3f46"/>
+<text x="620" y="382" fill="#ccc" font-size="11.5" font-family="JetBrains Mono,monospace">SELECT <tspan fill="#dcdcaa">IFNULL</tspan>(city,'N/A'), <tspan fill="#dcdcaa">LENGTH</tspan>(first_name),</text>
+<text x="620" y="400" fill="#ccc" font-size="11.5" font-family="JetBrains Mono,monospace">  <tspan fill="#dcdcaa">INSTR</tspan>(email, '@') FROM customers;  <tspan fill="#6a9955">-- args flipped</tspan></text>
+<!-- Row 5: DECLARE / SET -->
+<rect x="20" y="416" width="570" height="60" fill="#252526" stroke="#3f3f46"/>
+<text x="30" y="434" fill="#c586c0" font-size="11.5" font-family="JetBrains Mono,monospace">DECLARE</text>
+<text x="92" y="434" fill="#9cdcfe" font-size="11.5" font-family="JetBrains Mono,monospace">@minSal</text>
+<text x="160" y="434" fill="#4ec9b0" font-size="11.5" font-family="JetBrains Mono,monospace">INT</text>
+<text x="190" y="434" fill="#ccc" font-size="11.5" font-family="JetBrains Mono,monospace">= 500000;</text>
+<text x="30" y="452" fill="#ccc" font-size="11.5" font-family="JetBrains Mono,monospace">SELECT * FROM employees</text>
+<text x="30" y="470" fill="#ccc" font-size="11.5" font-family="JetBrains Mono,monospace">WHERE salary > <tspan fill="#9cdcfe">@minSal</tspan>;</text>
+<rect x="610" y="416" width="570" height="60" fill="#252526" stroke="#3f3f46"/>
+<text x="620" y="434" fill="#6a9955" font-size="11.5" font-family="JetBrains Mono,monospace" font-style="italic">-- declared @minSal = 500000</text>
+<text x="620" y="452" fill="#ccc" font-size="11.5" font-family="JetBrains Mono,monospace">SELECT * FROM employees</text>
+<text x="620" y="470" fill="#ccc" font-size="11.5" font-family="JetBrains Mono,monospace">WHERE salary > <tspan fill="#b5cea8">500000</tspan>;</text>
+<!-- Row 6: sys.tables -->
+<rect x="20" y="480" width="570" height="48" fill="#1e1e1e" stroke="#3f3f46"/>
+<text x="30" y="498" fill="#ccc" font-size="11.5" font-family="JetBrains Mono,monospace">SELECT name FROM <tspan fill="#dcdcaa">sys.tables</tspan>;</text>
+<text x="30" y="516" fill="#6a9955" font-size="11.5" font-family="JetBrains Mono,monospace" font-style="italic">-- SQL Server system catalog</text>
+<rect x="610" y="480" width="570" height="48" fill="#1e1e1e" stroke="#3f3f46"/>
+<text x="620" y="498" fill="#ccc" font-size="11.5" font-family="JetBrains Mono,monospace">SELECT name FROM (SELECT name, 'U' AS type, rowid</text>
+<text x="620" y="516" fill="#ccc" font-size="11.5" font-family="JetBrains Mono,monospace">FROM <tspan fill="#dcdcaa">sqlite_master</tspan> WHERE type='table');</text>
+<!-- Row 7: GO batches -->
+<rect x="20" y="532" width="570" height="60" fill="#252526" stroke="#3f3f46"/>
+<text x="30" y="550" fill="#ccc" font-size="11.5" font-family="JetBrains Mono,monospace">CREATE TABLE t(id INT);</text>
+<text x="30" y="568" fill="#c586c0" font-size="11.5" font-family="JetBrains Mono,monospace" font-weight="600">GO</text>
+<text x="30" y="586" fill="#ccc" font-size="11.5" font-family="JetBrains Mono,monospace">INSERT INTO t VALUES (1),(2),(3);</text>
+<rect x="610" y="532" width="570" height="60" fill="#252526" stroke="#3f3f46"/>
+<text x="620" y="550" fill="#ccc" font-size="11.5" font-family="JetBrains Mono,monospace">Batch 1: CREATE TABLE t(id INT);</text>
+<text x="620" y="568" fill="#6a9955" font-size="11.5" font-family="JetBrains Mono,monospace" font-style="italic">-- batch split here</text>
+<text x="620" y="586" fill="#ccc" font-size="11.5" font-family="JetBrains Mono,monospace">Batch 2: INSERT INTO t VALUES (1),(2),(3);</text>
+<!-- Status bar badges -->
+<text x="20" y="616" fill="#fff" font-size="13" font-weight="600">Status Bar Badge (click to cycle)</text>
+<g font-size="11">
+<rect x="20" y="624" width="140" height="22" rx="11" fill="#fff" fill-opacity="0.15" stroke="#0078d4"/>
+<text x="90" y="639" fill="#fff" font-weight="600" text-anchor="middle">T-SQL: AUTO</text>
+<text x="170" y="639" fill="#999">← Default. Translates 35+ patterns automatically.</text>
+<rect x="20" y="650" width="140" height="22" rx="11" fill="#dcdcaa" fill-opacity="0.4" stroke="#dcdcaa"/>
+<text x="90" y="665" fill="#fff" font-weight="600" text-anchor="middle">T-SQL: STRICT</text>
+<text x="170" y="665" fill="#999">← Translates but flags each substitution prominently in Messages.</text>
+<rect x="20" y="676" width="140" height="22" rx="11" fill="#a4262c" fill-opacity="0.4" stroke="#a4262c"/>
+<text x="90" y="691" fill="#fff" font-weight="600" text-anchor="middle">T-SQL: OFF</text>
+<text x="170" y="691" fill="#999">← No translation; raw SQLite. T-SQL syntax will produce errors.</text>
+</g>
+</svg>

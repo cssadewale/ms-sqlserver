@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 720" font-family="Segoe UI,sans-serif">
+<defs>
+<linearGradient id="herograd" x1="0" x2="1" y1="0" y2="1">
+<stop offset="0" stop-color="#0078d4"/><stop offset="0.6" stop-color="#005a9e"/><stop offset="1" stop-color="#003c6e"/>
+</linearGradient>
+<linearGradient id="avgrad" x1="0" x2="1">
+<stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#dfeaf5"/>
+</linearGradient>
+</defs>
+<rect width="760" height="720" fill="#252526"/>
+<!-- Modal head -->
+<rect x="0" y="0" width="760" height="32" fill="#252526"/>
+<text x="14" y="21" fill="#fff" font-size="12" font-weight="600">👤 Meet the Builder — Adewale Samson Adeagbo</text>
+<text x="734" y="22" fill="#999" font-size="16">×</text>
+<!-- Hero -->
+<rect x="0" y="32" width="760" height="190" fill="url(#herograd)"/>
+<circle cx="380" cy="92" r="32" fill="url(#avgrad)" stroke="#fff" stroke-width="3"/>
+<text x="380" y="102" fill="#0078d4" font-size="28" font-weight="800" text-anchor="middle">AA</text>
+<text x="380" y="156" fill="#fff" font-size="22" font-weight="700" text-anchor="middle">Adewale Samson Adeagbo</text>
+<text x="380" y="178" fill="#fff" fill-opacity="0.92" font-size="12" text-anchor="middle">Data Scientist · EdTech Builder · Virtual Tutor · AI-Augmented Solutions Developer</text>
+<text x="380" y="194" fill="#fff" fill-opacity="0.92" font-size="12" text-anchor="middle">DataTech Builder · FaithTech Builder</text>
+<rect x="295" y="204" width="170" height="14" rx="7" fill="#107c10"/>
+<text x="380" y="215" fill="#fff" font-size="10" font-weight="700" text-anchor="middle">Builder of MS SQL Server Simulator v10</text>
+<!-- Story section -->
+<text x="20" y="248" fill="#fff" font-size="13" font-weight="600">🇳🇬 The Story</text>
+<g fill="#ccc" font-size="11.5">
+<text x="20" y="270">15+ years standing in Nigerian classrooms — Nursery, Primary, JSS, SSS — teaching</text>
+<text x="20" y="286">Mathematics, Further Mathematics, Physics, Chemistry, and Computer Science across</text>
+<text x="20" y="302">His Marvellous Grace, Fredaks, Anchor Heights, Dave Model, and more schools.</text>
+<text x="20" y="324">In 2023, completed B.Sc(Ed) Computer Science Education at Lagos State University.</text>
+<text x="20" y="340">In 2025, the breakthrough through 3MTT (3 Million Technical Talent) Nigeria unlocked</text>
+<text x="20" y="356">data science capability.</text>
+</g>
+<rect x="20" y="372" width="3" height="40" fill="#0078d4"/>
+<text x="34" y="388" fill="#0078d4" font-style="italic" font-size="11.5">"I did not wait to become a developer. I used clear thinking and AI leverage</text>
+<text x="34" y="404" fill="#0078d4" font-style="italic" font-size="11.5">to build the tools my students needed."</text>
+<!-- HMG Concepts section -->
+<text x="20" y="436" fill="#fff" font-size="13" font-weight="600">🏛 HMG Concepts — Founded 2015</text>
+<g>
+<rect x="20" y="448" width="230" height="68" fill="#1e1e1e" stroke="#3f3f46"/>
+<text x="30" y="464" fill="#999" font-size="10" font-weight="600" letter-spacing="0.5">HMG ACADEMY</text>
+<text x="30" y="482" fill="#fff" font-size="12" font-weight="600">Virtual learning institution</text>
+<text x="30" y="498" fill="#999" font-size="10">Nursery → SSS3 · WAEC · NECO</text>
+<text x="30" y="510" fill="#999" font-size="10">JAMB · IGCSE · IELTS · JUPEB · SAT</text>
+<rect x="258" y="448" width="230" height="68" fill="#1e1e1e" stroke="#3f3f46"/>
+<text x="268" y="464" fill="#999" font-size="10" font-weight="600" letter-spacing="0.5">HMG TECHNOLOGIES</text>
+<text x="268" y="482" fill="#fff" font-size="12" font-weight="600">EdTech &amp; data solutions</text>
+<text x="268" y="498" fill="#999" font-size="10">CBT Pro · MS SQL Server</text>
+<text x="268" y="510" fill="#999" font-size="10">Simulator · ML tools</text>
+<rect x="496" y="448" width="230" height="68" fill="#1e1e1e" stroke="#3f3f46"/>
+<text x="506" y="464" fill="#999" font-size="10" font-weight="600" letter-spacing="0.5">HMG MEDIA</text>
+<text x="506" y="482" fill="#fff" font-size="12" font-weight="600">Content &amp; community</text>
+<text x="506" y="498" fill="#999" font-size="10">YouTube, social media,</text>
+<text x="506" y="510" fill="#999" font-size="10">articles</text>
+</g>
+<!-- Reach out section -->
+<text x="20" y="544" fill="#fff" font-size="13" font-weight="600">📡 Reach Out</text>
+<g font-size="11.5">
+<rect x="20" y="556" width="84" height="24" fill="#1e1e1e" stroke="#3f3f46"/>
+<text x="32" y="572" fill="#ccc">🌐 Portfolio</text>
+<rect x="110" y="556" width="80" height="24" fill="#1e1e1e" stroke="#3f3f46"/>
+<text x="122" y="572" fill="#ccc">💼 LinkedIn</text>
+<rect x="196" y="556" width="140" height="24" fill="#1e1e1e" stroke="#3f3f46"/>
+<text x="208" y="572" fill="#ccc">⌥ GitHub (cssadewale)</text>
+<rect x="342" y="556" width="106" height="24" fill="#1e1e1e" stroke="#3f3f46"/>
+<text x="354" y="572" fill="#ccc">🎓 HMG Academy</text>
+<rect x="454" y="556" width="112" height="24" fill="#1e1e1e" stroke="#3f3f46"/>
+<text x="466" y="572" fill="#ccc">🏛 HMG Concepts</text>
+<rect x="572" y="556" width="88" height="24" fill="#1e1e1e" stroke="#3f3f46"/>
+<text x="584" y="572" fill="#ccc">𝕏 Twitter/X</text>
+<rect x="666" y="556" width="84" height="24" fill="#1e1e1e" stroke="#3f3f46"/>
+<text x="678" y="572" fill="#ccc">📺 YouTube</text>
+<rect x="20" y="586" width="92" height="24" fill="#1e1e1e" stroke="#3f3f46"/>
+<text x="32" y="602" fill="#ccc">📷 Instagram</text>
+<rect x="118" y="586" width="62" height="24" fill="#1e1e1e" stroke="#3f3f46"/>
+<text x="130" y="602" fill="#ccc">✉ Email</text>
+<rect x="186" y="586" width="206" height="24" fill="#1e1e1e" stroke="#3f3f46"/>
+<text x="198" y="602" fill="#ccc">📱 WhatsApp +234 810 086 6322</text>
+<rect x="398" y="586" width="172" height="24" fill="#1e1e1e" stroke="#3f3f46"/>
+<text x="410" y="602" fill="#ccc">☎ +234 809 448 1488</text>
+</g>
+<!-- Bottom tagline -->
+<line x1="20" y1="636" x2="740" y2="636" stroke="#3f3f46"/>
+<text x="380" y="660" fill="#999" font-size="10.5" font-style="italic" text-anchor="middle">Built on an Android tablet in Lagos, Nigeria · MIT Licence · © 2026</text>
+<!-- Footer buttons -->
+<rect x="0" y="678" width="760" height="42" fill="#252526"/>
+<rect x="448" y="688" width="100" height="24" rx="2" fill="#252526" stroke="#3f3f46"/>
+<text x="498" y="704" fill="#ccc" font-size="11.5" text-anchor="middle">📱 WhatsApp</text>
+<rect x="556" y="688" width="80" height="24" rx="2" fill="#252526" stroke="#3f3f46"/>
+<text x="596" y="704" fill="#ccc" font-size="11.5" text-anchor="middle">✉ Email</text>
+<rect x="644" y="688" width="100" height="24" rx="2" fill="#0078d4"/>
+<text x="694" y="704" fill="#fff" font-size="11.5" text-anchor="middle" font-weight="600">Close</text>
+</svg>
